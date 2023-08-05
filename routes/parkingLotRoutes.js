@@ -1,6 +1,6 @@
 
 const express = require('express');
-const parkingLotController = require('../controllers/parkingLotController');
+const parkingLotController = require("../controllers/parkingLotController");
 
 const router = express.Router();
 
