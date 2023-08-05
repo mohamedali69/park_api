@@ -1,5 +1,18 @@
 const ParkingLot = require('../models/ParkingLot');
 
+//he4a ll creation mt3 slots
+exports.createSlots = async (req, res) => {
+  try {
+    const slotsData = req.body.slotsData;
+    const createdSlots = await ParkingLot.createSlots(slotsData);
+
+    res.json({ message: 'Slots created successfully', createdSlots });
+  } catch (err) {
+    console.error('Error creating slots:', err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
 //he4a bech yjiblek el free slots bl vehicle type
 exports.getFreeSlots = async (req, res) => {
   try {
