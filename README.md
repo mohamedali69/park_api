@@ -1,1 +1,4 @@
-# park_api
+Park api
+
+npm i
+node server.js
